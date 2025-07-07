@@ -4,7 +4,7 @@
     "ms-toolsai.jupyter",           // Jupyter
     "mechatroner.rainbow-csv",      // Rainbow CSV
     "ms-vscode-remote.remote-wsl",  // Remote - WSL
-    "lfm.vscode-makefile-term",     // Makefile Run Tools
+    "lfm.vscode-makefile-term",      // Makefile Run Tools
     "samuelcolvin.jinjahtml"        // Jinja
   ]
 }
