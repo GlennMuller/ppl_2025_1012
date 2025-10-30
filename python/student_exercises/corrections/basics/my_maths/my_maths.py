@@ -46,7 +46,10 @@ def factorial(n: int) -> int:
     :param n: The number to compute the factorial of
     :return: The factorial of n
     """
-    return None
+    total_fact = 1
+    for i in range(2, n + 1):
+        total_fact *= i  # total_fact = total_fact * i
+    return total_fact
 
 
 def fibonacci(n: int) -> int:
@@ -58,13 +61,18 @@ def fibonacci(n: int) -> int:
     return None
 
 
-def sum(n: int) -> int:  # O(1); O(n); O(n^2); O(log n)
+def sum(n: int) -> int:
     """
     Function that computes the sum of all integers from 0 to n.
     :param n: The number to compute the sum up to
     :return: The sum of all integers from 0 to n
     """
-    return None
+    # total_sum = 0               # O(1)       -> # O(n)
+    # for i in range(1, n + 1):   # O(n)
+    #     total_sum += i            # O(1)
+    # return total_sum            # O(1)
+
+    return n * (n + 1) / 2  # O(1)
 
 
 def square(n: int) -> int:
@@ -84,4 +92,10 @@ def is_prime(n: int) -> bool:
     :param n: The number to check
     :return: True if the number is prime, False otherwise
     """
-    return None
+    if n == 0 or n == 1:
+        return False
+
+    for i in range(2, int(n ** (1 / 2)) + 1):
+        if n % i == 0:
+            return False
+    return True
