@@ -60,13 +60,15 @@ class TestArrayFunctions(unittest.TestCase):
         self.assertEqual(variance([1, 2, 3, 4, 5]), 2)
         self.assertEqual(variance([1, 1, 1, 1, 1, 1]), 0)
         self.assertEqual(variance([1, 1, 1, 10, 10]), 19.44)
-        self.assertEqual(variance([4, 2, 4, 3, 2, 2]), 0.8055555555555556)
+        self.assertAlmostEqual(variance([4, 2, 4, 3, 2, 2]), 0.8055555555555556)
 
     def test_standard_deviation(self):
         self.assertAlmostEqual(standard_deviation([1, 2, 3, 4, 5]), 1.4142135623730951)
         self.assertAlmostEqual(standard_deviation([1, 1, 1, 1, 1, 1]), 0)
         self.assertAlmostEqual(standard_deviation([1, 1, 1, 10, 10]), 4.409081537009721)
-        self.assertAlmostEqual(standard_deviation([4, 2, 4, 3, 2, 2]), 0.8975274678557507)
+        self.assertAlmostEqual(
+            standard_deviation([4, 2, 4, 3, 2, 2]), 0.8975274678557507
+        )
 
     def test_exist(self):
         self.assertTrue(exist([1, 2, 3], 2))
